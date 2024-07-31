@@ -1,0 +1,63 @@
+{
+  "name": "@ru/ui",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:lint-staged": "lint-staged",
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build"
+  },
+  "main": "./dist/@ru/ui.umd.js",
+  "module": "./dist/@ru/ui.es.js",
+  "typings": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/@ru/ui.es.js",
+      "require": "./dist/@ru/ui.umd.js"
+    }
+  },
+  "files": [
+    "dist/*"
+  ],
+  "dependencies": {
+    "@react-spring/web": "^9.7.3",
+    "antd": "^5.18.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.2",
+    "@commitlint/config-conventional": "^18.4.2",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/jsonp": "^0.2.3",
+    "@types/qs": "^6.9.10",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "clsx": "^2.0.0",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.4",
+    "eslint-plugin-sonarjs": "^0.23.0",
+    "eslint-plugin-storybook": "^0.6.15",
+    "husky": "^8.0.3",
+    "less": "^4.2.0",
+    "lint-staged": "^15.1.0",
+    "postcss-px-to-viewport": "github:evrone/postcss-px-to-viewport",
+    "prettier": "^3.1.0",
+    "storybook": "^7.5.3",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0",
+    "vite-plugin-css-injected-by-js": "^3.3.1"
+  }
+}
